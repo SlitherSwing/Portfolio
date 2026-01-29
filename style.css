@@ -64,7 +64,6 @@ body a {
     grid-row: 2 / span 3;
 }
 
-/* WRAPPER FOR THE 3 BUTTONS */
 .Links-Wrapper {
     grid-column: 2;
     grid-row: 4;
@@ -123,16 +122,17 @@ body a {
     max-width: 450px;
     height: fit-content;
     margin: 0 auto;
+    padding-top: 120px;
 }
 
-
+/* Timeline - Ligne verticale */
 .Bloc-2-Timeline::after {
     content: '';
     position: absolute;
     width: 6px;
     background-color: var(--secondary-color);
-    top: 0px;
-    bottom: -100px;
+    top: 150px;
+    bottom: -150px;
     left: 50%;
     margin-left: -3px;
     border-radius: 3px;
@@ -141,6 +141,25 @@ body a {
 .Bloc-2-Icone {
     width: 25px;
     height: 25px;
+}
+
+.Timeline-Title {
+    text-align: center;
+    width: 450px;
+    margin: 0 auto;
+}
+
+
+.Timeline-Title-Container {
+    width: fit-content;
+    padding: 15px;
+    font-size: 25px;
+    border-radius: 30px;
+    box-shadow: 0 30px 90px -20px rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .Timeline-Container {
@@ -271,9 +290,6 @@ body a {
     right: 90%;
     top: 10%;
 }
-
-
-
 
 
 
