@@ -78,23 +78,26 @@
         <div class="Three">
             <div class="Bloc-3-Container">
                 <div class="Bloc-3-Projet-Container">
+                    <img class="Bloc-3-Popup Tooltip" data-name="projet_3"
+                        src="assets/librairies/question-mark-circle-svgrepo-com.svg" alt="">
+                    <p class="Projet-Titre-Position">Projet réalisé 3</p>
                     <a href="Produit.html">
-                        <img class="Bloc-3-Popup Tooltip" data-name="projet_3"
-                            src="assets/librairies/question-mark-circle-svgrepo-com.svg" alt="">
                         <img class="Bloc-3-Img" src="assets/librairies/Projet_3.png" alt="">
                     </a>
                 </div>
                 <div class="Bloc-3-Projet-Container">
+                    <img class="Bloc-3-Popup Tooltip" data-name="projet_integration"
+                        src="assets/librairies/question-mark-circle-svgrepo-com.svg" alt="">
+                    <p class="Projet-Titre-Position">Projet réalisé 2</p>
                     <a href="pageweb.html">
-                        <img class="Bloc-3-Popup Tooltip" data-name="projet_integration"
-                            src="assets/librairies/question-mark-circle-svgrepo-com.svg" alt="">
                         <img class="Bloc-3-Img" src="assets/librairies/Projet_Integration.png" alt="">
                     </a>
                 </div>
                 <div class="Bloc-3-Projet-Container">
+                    <img class="Bloc-3-Popup Tooltip" data-name="projet_cv"
+                        src="assets/librairies/question-mark-circle-svgrepo-com.svg" alt="">
+                    <p class="Projet-Titre-Position">Projet réalisé 1</p>
                     <a href="AJ.html">
-                        <img class="Bloc-3-Popup Tooltip" data-name="projet_cv"
-                            src="assets/librairies/question-mark-circle-svgrepo-com.svg" alt="">
                         <img class="Bloc-3-Img" src="assets/librairies/Projet_CV.png" alt="">
                     </a>
                 </div>
@@ -172,7 +175,12 @@
                 if (container) {
                     container.classList.add("fade-in");
                     container.style.left = `${e.pageX - container.offsetWidth}px`;
-                    container.style.top = `${e.pageY}px`;
+
+                    if (name === "projet_cv") {
+                        container.style.top = `${e.pageY - container.offsetHeight}px`;
+                    } else {
+                        container.style.top = `${e.pageY}px`;
+                    }
                 }
             });
 
