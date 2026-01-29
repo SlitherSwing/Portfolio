@@ -33,8 +33,9 @@
                 <div class="Timeline-Container Left">
                     <div class="Timeline-Content">
                         <p>Septembre 2025 : </p>
-                        <p>Apprentissage HTML/CSS</p>
-                        <p>Apprentissage C#/SQL</p>
+                        <img class="Bloc-2-Icone" src="assets/librairies/html-5-svgrepo-com.svg" alt="">
+                        <img class="Bloc-2-Icone" src="assets/librairies/css-3-svgrepo-com.svg" alt="">
+                        <img class="Bloc-2-Icone" src="assets/librairies/csharp-svgrepo-com.svg" alt="">
                     </div>
                 </div>
                 <div class="Timeline-Container Right">
@@ -64,13 +65,40 @@
         <!-- Réalisations, différents projets-->
         <div class="Three">
             <div class="Bloc-3-Container">
-                <div class="Bloc-3-Projet-Container"><a href="Produit.html"><img class="Bloc-3-Img"
-                            src="assets/librairies/Projet_3.png" alt=""></a></div>
-                <div class="Bloc-3-Projet-Container"><a href="pageweb.html"><img class="Bloc-3-Img"
-                            src="assets/librairies/Projet_Integration.png" alt=""></a></div>
-                <div class="Bloc-3-Projet-Container"><a href="AJ.html"><img class="Bloc-3-Img"
-                            src="assets/librairies/Projet_CV.png" alt=""></a></div>
+                <div class="Bloc-3-Projet-Container">
+                    <a href="Produit.html">
+                        <img class="Bloc-3-Popup Tooltip" data-name="projet_3"
+                            src="assets/librairies/question-mark-circle-svgrepo-com.svg" alt="">
+                        <img class="Bloc-3-Img" src="assets/librairies/Projet_3.png" alt="">
+                    </a>
+                </div>
+                <div class="Bloc-3-Projet-Container">
+                    <a href="pageweb.html">
+                        <img class="Bloc-3-Popup Tooltip" data-name="projet_integration"
+                            src="assets/librairies/question-mark-circle-svgrepo-com.svg" alt="">
+                        <img class="Bloc-3-Img" src="assets/librairies/Projet_Integration.png" alt="">
+                    </a>
+                </div>
+                <div class="Bloc-3-Projet-Container">
+                    <a href="AJ.html">
+                        <img class="Bloc-3-Popup Tooltip" data-name="projet_cv"
+                            src="assets/librairies/question-mark-circle-svgrepo-com.svg" alt="">
+                        <img class="Bloc-3-Img" src="assets/librairies/Projet_CV.png" alt="">
+                    </a>
+                </div>
             </div>
+        </div>
+        <div data-name="projet_3" class="Tooltip-Container">
+            <p>Dernier projet effectué, un site web type épicerie sur plusieurs pages, le site a été réalisé par en
+                groupe
+                de 4 personnes</p>
+            <p>Il utilise les langages HTML, CSS, et JS.</p>
+        </div>
+        <div data-name="projet_integration" class="Tooltip-Container">
+            <p>Bravo ça marche bien</p>
+        </div>
+        <div data-name="projet_cv" class="Tooltip-Container">
+            <p>C'est bon on a compris</p>
         </div>
 
 
@@ -108,4 +136,29 @@
             </div>
         </div>
     </div>
+    <script>
+        const tooltips = Array.from(document.querySelectorAll(".Tooltip"));
+
+        tooltips.forEach((tooltip) => {
+            tooltip.addEventListener("mouseenter", (e) => {
+                const name = tooltip.getAttribute("data-name");
+                const container = document.querySelector(`.Tooltip-Container[data-name="${name}"]`);
+
+                if (container) {
+                    container.classList.add("fade-in");
+                    container.style.left = `${e.pageX - container.offsetWidth}px`;
+                    container.style.top = `${e.pageY}px`;
+                }
+            });
+
+            tooltip.addEventListener("mouseout", () => {
+                const name = tooltip.getAttribute("data-name");
+                const container = document.querySelector(`.Tooltip-Container[data-name="${name}"]`);
+
+                if (container) {
+                    container.classList.remove("fade-in");
+                }
+            });
+        });
+    </script>
 </body>
