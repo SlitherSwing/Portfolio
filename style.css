@@ -263,12 +263,11 @@ body a {
     min-height: 200px;
     padding: 15px;
     font-size: 25px;
-    background: rgba(255, 255, 255, 0.95) !important;
-    backdrop-filter: blur(3.5px) !important;
     position: absolute;
     z-index: 100;
     display: none;
     opacity: 0;
+    background: white !important;
 }
 
 .fade-in {
