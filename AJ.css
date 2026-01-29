@@ -10,10 +10,12 @@ body {
     flex-direction: row;
 
 }
+
 .Logo_Containeur {
     display: flex;
     flex: 1;
 }
+
 .Logo_Apple {
     width: 110px;
     height: 130px;
@@ -22,11 +24,13 @@ body {
     padding-top: 25px;
     padding-bottom: 30px;
 }
+
 .Bandeau_Liens_Containeur {
     display: flex;
     flex: 1;
     justify-content: center;
 }
+
 .Bandeau_Liens {
     display: flex;
     flex-direction: row;
@@ -35,6 +39,7 @@ body {
     height: 100%;
 
 }
+
 .Pseudo_Liens {
     cursor: pointer;
     display: inline-block;
@@ -43,8 +48,9 @@ body {
     font-size: 1.5em;
     font-weight: lighter;
 }
+
 .Pseudo_Liens::after {
-    content:'';
+    content: '';
     position: absolute;
     left: 0;
     bottom: -4px;
@@ -55,6 +61,7 @@ body {
     transform-origin: left;
     transition: transform 0.3s ease;
 }
+
 .Pseudo_Liens:hover::after {
     transform: scaleX(1);
 }
@@ -62,25 +69,27 @@ body {
 .Contact_Containeur {
     width: 100%;
     height: 80vh;
-    background-image: url(BanqueImage/fondecran.jpg);
+    background-image: url(assets/aj/fondecran.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-color: rgba(255, 255, 255, 0.75);
-    background-blend-mode:lighten;
+    background-blend-mode: lighten;
     display: flex;
     flex-direction: row;
 }
+
 .Contact_Informations {
-    display:flex;
+    display: flex;
     flex-direction: column;
     flex: 1;
     justify-content: center;
     margin-left: 150px;
 }
+
 .Bonjour {
-    width:fit-content;
+    width: fit-content;
     font-size: 1.4em;
-    font-weight:400;
+    font-weight: 400;
     color: white;
     margin-bottom: 10px;
     border: 1px solid #80DDCA;
@@ -88,16 +97,19 @@ body {
     padding: 5px 30px;
     border-radius: 360px 366px 360px 0px;
 }
+
 .Nom {
     font-size: 5em;
     font-weight: normal;
     margin: 0;
 }
-.SousTitre{
+
+.SousTitre {
     font-size: 3em;
     font-weight: normal;
     margin: 0 0 20px 0;
 }
+
 .Contact_Ligne_Info {
     display: flex;
     flex-direction: row;
@@ -106,6 +118,7 @@ body {
     gap: 20px;
     font-weight: lighter;
 }
+
 .Contact_Image {
     width: 30px;
     height: 30px;
@@ -116,16 +129,18 @@ body {
     height: 20px;
     padding: 20px;
 }
+
 .Contact_Photo {
     flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 .Contact_Photo_Profil {
     width: 50%;
     height: auto;
-    box-shadow: 0 0 0 20px rgba(0,0,0,0.15),0 0 0 40px rgba(0,0,0,0.1);
+    box-shadow: 0 0 0 20px rgba(0, 0, 0, 0.15), 0 0 0 40px rgba(0, 0, 0, 0.1);
     border-radius: 360px;
 
 }
@@ -136,32 +151,38 @@ body {
     display: flex;
     flex-direction: row;
 }
+
 .Apropos_Image_Containeur {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .Apropos_Image {
     width: 80%;
     height: auto;
 }
+
 .Apropos_Description_Containeur {
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
+
 .Apropos_Description_Containeur h2 {
     font-size: 2.3em;
     font-weight: normal;
     margin-bottom: 20px;
 }
+
 .Apropos_Competences {
     display: flex;
     flex-direction: row;
     gap: 20px;
 }
+
 .Apropos_Competences p {
     border: 2px solid #80DDCA;
     border-radius: 5px;
@@ -169,6 +190,7 @@ body {
     margin: 5px;
     line-height: 40px;
 }
+
 .Apropos_Bouton_CV {
     width: fit-content;
     display: flex;
@@ -177,13 +199,14 @@ body {
     gap: 10px;
     margin-top: 50px;
     text-decoration: none;
-    background-color:#0bceaf ;
+    background-color: #0bceaf;
     color: white;
     border: none;
-    padding:10px 20px;
+    padding: 10px 20px;
     font-size: 18px;
-    border-radius:360px 360px 360px 360px;
+    border-radius: 360px 360px 360px 360px;
 }
+
 .Apropos_Bouton_CV_Image {
     width: 20px;
     height: 20px;
