@@ -301,7 +301,9 @@ body a {
     opacity: 1;
     position: absolute;
     right: 90%;
-    top: 10%;
+    top: 5%;
+    z-index: 20;
+    cursor: pointer;
 }
 
 .Skills-Level {
@@ -426,7 +428,20 @@ body a {
     transform: translateY(0px);
 }
 
-@media screen and (max-width: 1505px) {
+@media (max-width: 1600px) {
+    .Timeline-Title {
+        width: 100%;
+    }
+
+    .Timeline-Title-Container {
+        max-width: 100%;
+        width: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 1505px) {
     .donut {
         width: 70px;
         height: 70px;
@@ -440,5 +455,39 @@ body a {
     .Links-Icone {
         width: 20px;
         height: 20px;
+    }
+}
+
+@media (max-width: 1400px) {
+    .Projects-Container {
+
+        align-content: center;
+        justify-content: center;
+    }
+
+    .Projects-Image {
+        width: 80%;
+        height: auto;
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 1142px) {
+    .donut {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 1105px) {
+    body {
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .Container {
+        height: auto;
+        min-height: 100vh;
+        grid-template-rows: auto auto auto auto;
     }
 }
