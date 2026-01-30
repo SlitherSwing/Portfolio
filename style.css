@@ -92,18 +92,18 @@ body a {
     padding: 0;
 }
 
-.Bloc-1-Img {
+.Who-Am-I-Image {
     width: 160px;
     height: 200px;
     border-radius: 10px;
 }
 
-.Bloc-1 {
+.Who-Am-I {
     display: flex;
     flex-direction: row;
 }
 
-.Bloc-1-Text {
+.Who-Am-I-Text {
     display: flex;
     flex-direction: column;
     padding-left: 20px;
@@ -117,7 +117,7 @@ body a {
     margin: 0 auto;
 }
 
-.Bloc-2-Timeline {
+.Timeline {
     position: relative;
     max-width: 450px;
     height: fit-content;
@@ -126,7 +126,7 @@ body a {
 }
 
 /* Timeline - Ligne verticale */
-.Bloc-2-Timeline::after {
+.Timeline::after {
     content: '';
     position: absolute;
     width: 6px;
@@ -138,7 +138,7 @@ body a {
     border-radius: 3px;
 }
 
-.Bloc-2-Icone {
+.Icone-Timeline {
     width: 25px;
     height: 25px;
 }
@@ -211,7 +211,7 @@ body a {
 
 
 
-.Bloc-3-Container {
+.Projects {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -221,7 +221,7 @@ body a {
     height: 100%;
 }
 
-.Bloc-3-Img {
+.Projects-Image {
     width: fit-content;
     height: 200px;
     border-radius: 10px;
@@ -229,13 +229,13 @@ body a {
     transition: all 0.4s ease;
 }
 
-.Bloc-3-Img:hover {
+.Projects-Image:hover {
     transform: translateY(-10px);
     transition: all 0.4s ease;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.55);
 }
 
-.Bloc-3-Projet-Container {
+.Projects-Container {
     flex: 1;
     width: 100%;
     background: rgba(230, 195, 195, 0.12);
@@ -249,7 +249,7 @@ body a {
     padding: 0;
 }
 
-.Projet-Titre-Position {
+.Projects-Title-Position {
     position: absolute;
     top: 0;
     left: 20%;
@@ -286,7 +286,7 @@ body a {
     }
 }
 
-.Bloc-3-Popup {
+.Projects-Popup {
     width: 25px;
     height: 25px;
     border-radius: 5px;
@@ -299,7 +299,7 @@ body a {
 
 
 
-.Bloc-5-Button {
+.Links-Button {
     display: flex;
     position: relative;
     border: none;
@@ -313,13 +313,13 @@ body a {
     margin: 0;
 }
 
-.Bloc-5-Button:hover {
+.Links-Button:hover {
     cursor: pointer;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.55);
     width: 230px;
 }
 
-.Bloc-5-Icone {
+.Links-Icone {
     position: absolute;
     width: 25px;
     height: 25px;
@@ -328,7 +328,7 @@ body a {
     opacity: 1;
 }
 
-.Bloc-5-Text {
+.Links-Text {
     position: absolute;
     opacity: 0;
     transition: all 0.4s ease;
@@ -336,7 +336,7 @@ body a {
     white-space: nowrap;
 }
 
-.Bloc-5-Button a {
+.Links-Button a {
     position: absolute;
     top: 0;
     left: 0;
@@ -349,12 +349,12 @@ body a {
     color: inherit;
 }
 
-.Bloc-5-Button:hover .Bloc-5-Icone {
+.Links-Button:hover .Links-Icone {
     opacity: 0;
     transform: translateY(-10px);
 }
 
-.Bloc-5-Button:hover .Bloc-5-Text {
+.Links-Button:hover .Links-Text {
     opacity: 1;
     transform: translateY(0px);
 }
