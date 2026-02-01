@@ -103,7 +103,6 @@ body a {
 .Who-Am-I {
     display: flex;
     flex-direction: row;
-    ekfjlkzefzl
 }
 
 .Who-Am-I-Text {
@@ -114,17 +113,22 @@ body a {
 }
 
 .Text-Shadow {
-    color: #e0e0e0;
-    filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.3));
+    color: #116AAC;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.15));
+    font-size: 18px;
 }
 
 .Who-Am-I p::before {
     content: "";
     background: url("/assets/librairies/exclamation-circle.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
     width: 25px;
     height: 25px;
     display: inline-block;
-
+    vertical-align: -6px;
+    margin-right: 8px;
 }
 
 
@@ -323,6 +327,7 @@ body a {
     top: 5%;
     z-index: 20;
     cursor: pointer;
+    fill: white;
 }
 
 .Skills-Level {
