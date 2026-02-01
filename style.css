@@ -8,6 +8,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 body {
@@ -102,14 +103,29 @@ body a {
 .Who-Am-I {
     display: flex;
     flex-direction: row;
+    ekfjlkzefzl
 }
 
 .Who-Am-I-Text {
     display: flex;
     flex-direction: column;
     padding-left: 20px;
+
 }
 
+.Text-Shadow {
+    color: #e0e0e0;
+    filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.3));
+}
+
+.Who-Am-I p::before {
+    content: "";
+    background: url("/assets/librairies/exclamation-circle.svg");
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+
+}
 
 
 
@@ -156,7 +172,7 @@ body a {
     padding: 15px;
     font-size: 25px;
     border-radius: 30px;
-    box-shadow: 0 30px 90px -20px rgba(0, 0, 0, 0.9);
+    box-shadow: 0 30px 90px -20px rgba(0, 0, 0, 0.2);
     position: absolute;
     top: 0;
 }
@@ -254,9 +270,12 @@ body a {
     position: absolute;
     top: 4%;
     left: 20%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.7);
+    /*box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);*/
     padding: 5px;
     border-radius: 5px;
+    font-weight: bolder;
+    font-style: italic;
+    text-transform: uppercase;
 }
 
 .Tooltip-Container {
