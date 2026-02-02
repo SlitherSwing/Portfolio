@@ -496,6 +496,17 @@ body a {
     }
 }
 
+@media (max-width: 1197px) {
+    .Timeline-Title-Container {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .Timeline-Container {
+        font-size: 12px;
+    }
+}
+
 @media (max-width: 1142px) {
     .donut {
         width: 60px;
@@ -513,5 +524,70 @@ body a {
         height: auto;
         min-height: 100vh;
         grid-template-rows: auto auto auto auto;
+    }
+}
+
+@media (max-width: 1100px) {
+
+    .Container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .Three {
+        grid-column: 1 / span 2;
+        grid-row: 5 / span 3;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .Projects {
+        grid-column: 1;
+        grid-row: 1 / span 3;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .Projects-Image {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .Projects-Popup {
+        display: none;
+    }
+
+    .Projects-Container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Position tooltips in column 2 */
+    .Tooltip-Container {
+        opacity: 1;
+        position: static;
+        width: 100%;
+        min-height: auto;
+        grid-column: 2;
+    }
+
+    /* First tooltip - row 1 */
+    .Tooltip-Container[data-name="projet_3"] {
+        grid-row: 5;
+    }
+
+    /* Second tooltip - row 2 */
+    .Tooltip-Container[data-name="projet_integration"] {
+        grid-row: 6;
+    }
+
+    /* Third tooltip - row 3 */
+    .Tooltip-Container[data-name="projet_cv"] {
+        grid-row: 7;
     }
 }
