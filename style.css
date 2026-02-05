@@ -590,4 +590,119 @@ body a {
     .Tooltip-Container[data-name="projet_cv"] {
         grid-row: 7;
     }
+
+    .Projects-Title-Position {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .Container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 0;
+        width: 100vw;
+        padding: 0;
+        margin: 0;
+        display: grid;
+    }
+
+    .Three,
+    .Projects {
+        display: contents;
+    }
+
+    .One,
+    .Two,
+    .Four,
+    .Eight,
+    .Links-Wrapper,
+    .Projects-Container,
+    .Tooltip-Container {
+        grid-column: 1 !important;
+        grid-row: auto !important;
+        width: 100vw !important;
+        margin: 0 !important;
+        border-radius: 0;
+        box-sizing: border-box;
+    }
+
+    .One {
+        order: 1;
+    }
+
+    .Four {
+        order: 2;
+    }
+
+    .Two {
+        order: 3;
+    }
+
+    .Eight {
+        order: 4;
+    }
+
+    .Projects>.Projects-Container:nth-child(1) {
+        order: 6;
+    }
+
+    .Tooltip-Container[data-name="projet_3"] {
+        order: 7;
+    }
+
+    .Projects>.Projects-Container:nth-child(2) {
+        order: 8;
+    }
+
+    .Tooltip-Container[data-name="projet_integration"] {
+        order: 9;
+    }
+
+    .Projects>.Projects-Container:nth-child(3) {
+        order: 10;
+    }
+
+    .Tooltip-Container[data-name="projet_cv"] {
+        order: 11;
+    }
+
+    .Links-Wrapper {
+        order: 20;
+        padding: 20px;
+        justify-content: center;
+    }
+
+    .Tooltip-Container {
+        position: static;
+        opacity: 1;
+        display: block;
+        min-height: auto;
+        background: #fff;
+        padding: 20px;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .Projects-Container {
+        border: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        padding: 20px 0;
+    }
+
+    .Projects-Image {
+        width: 90%;
+        height: auto;
+        max-width: 400px;
+    }
+
+    .Projects-Title-Position {
+        position: static;
+        text-align: center;
+        margin-bottom: 10px;
+        display: block;
+    }
 }
