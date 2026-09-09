@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "@tailwindcss/cli": "4.1.18",
+    "tailwindcss": "4.1.18"
+  },
+  "private": true,
+  "scripts": {
+    "build:css": "tailwindcss -i ./Nouveau/input.css -o ./Nouveau/output.css",
+    "watch:css": "tailwindcss -i ./Nouveau/input.css -o ./Nouveau/output.css --watch"
+  }
+}

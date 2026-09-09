@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Accueil</title>
+    <link href="./Nouveau/output.css" rel="stylesheet">
+</head>
+
+<body class="bg-[#0b0b1a] text-white font-sans selection:bg-purple-500/30 overflow-x-hidden">
+
+    <div class="fixed inset-0 -z-10 bg-[#0b0b1a]">
+        <div
+            class="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-purple-600/20 blur-[120px] rounded-full animate-pulse">
+        </div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-indigo-600/20 blur-[120px] rounded-full">
+        </div>
+        <div
+            class="absolute top-[30%] right-[10%] w-[30%] h-[30%] bg-fuchsia-600/10 blur-[100px] rounded-full animate-bounce [animation-duration:10s]">
+        </div>
+
+
+        <div class="absolute inset-0 opacity-[0.03] pointer-events-none"
+            style="background-image: linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px); background-size: 50px 50px;">
+        </div>
+    </div>
+
+    <div class="relative w-full p-10 min-h-screen">
+        <nav class="flex justify-between items-center text-gray-300 mb-20 relative z-10">
+            <span
+                class="font-bold text-xl tracking-tight bg-clip-text text-transparent bg-linear-to-r from-purple-400 to-indigo-400">Kevin
+                Mascaro</span>
+            <ul class="flex gap-8 font-medium">
+                <li>
+                    <a class="relative inline-block hover:text-purple-400 transition-colors after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-full after:bg-purple-500 after:origin-left after:scale-x-0 after:transition-transform after:duration-300 after:ease-out hover:after:scale-x-100 focus-visible:after:scale-x-100 motion-reduce:after:transition-none"
+                        href="Nouveau/assets/librairies/CV-Kevin-Mascaro.pdf">Mon
+                        CV</a>
+                </li>
+                <li>
+                    <a class="relative inline-block hover:text-purple-400 transition-colors after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-full after:bg-purple-500 after:origin-left after:scale-x-0 after:transition-transform after:duration-300 after:ease-out hover:after:scale-x-100 focus-visible:after:scale-x-100 motion-reduce:after:transition-none"
+                        href="./index.html">Accueil</a>
+                </li>
+                <li>
+                    <a class="relative inline-block hover:text-purple-400 transition-colors after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-full after:bg-purple-500 after:origin-left after:scale-x-0 after:transition-transform after:duration-300 after:ease-out hover:after:scale-x-100 focus-visible:after:scale-x-100 motion-reduce:after:transition-none"
+                        href="./Nouveau/contact.html">Contact</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="flex flex-col justify-center items-center gap-12 relative z-10">
+            <div class="text-center group">
+                <h2
+                    class="text-4xl font-bold bg-clip-text text-transparent bg-linear-to-r from-purple-400 to-indigo-400 mb-4">
+                    Bienvenue sur mon
+                </h2>
+                <h2 class="relative inline-block text-6xl font-black italic tracking-tighter">
+                    <span class="overline decoration-purple-500 decoration-[6px] underline-offset-8">port</span>folio
+                </h2>
+            </div>
+
+            <div
+                class="w-full max-w-4xl p-px rounded-3xl bg-linear-to-br from-white/20 to-transparent shadow-[0_0_50px_-12px_rgba(168,85,247,0.3)]">
+                <div
+                    class="bg-black/40 backdrop-blur-2xl rounded-3xl p-8 flex flex-col md:flex-row justify-center items-center gap-12">
+                    <div class="relative group">
+                        <div
+                            class="absolute inset-0 bg-purple-500/20 blur-2xl rounded-full group-hover:bg-purple-500/40 transition-all duration-500">
+                        </div>
+                        <img class="w-40 h-52 rounded-2xl relative z-10 border border-white/10 object-cover"
+                            src="Nouveau/assets/librairies/profilPicture.webp">
+                    </div>
+                    <div class="flex flex-col gap-6 text-center md:text-left max-w-lg">
+                        <h1
+                            class="font-bold text-5xl bg-clip-text text-transparent bg-linear-to-r from-white to-gray-400 leading-tight">
+                            Kevin Mascaro</h1>
+                        <p class="text-xl text-purple-300/80 italic font-medium tracking-wide">Développeur Full-Stack
+                            Jr.</p>
+                        <p class="text-gray-400 leading-relaxed">Passionné par l'informatique, je suis à la recherche de
+                            nouvelles expériences.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-32 relative z-10 group/slider">
+            <h3 class="self-start ml-4 font-bold text-4xl mb-12 italic tracking-tighter">
+                <span class="overline decoration-purple-500 decoration-[6px] underline-offset-8">Pro</span>jets
+            </h3>
+
+
+            <button id="prev-project"
+                class="hidden md:flex absolute left-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 items-center justify-center rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-purple-500/40 hover:border-purple-500/50 transition-all duration-300 cursor-pointer shadow-lg opacity-0 group-hover/slider:opacity-100">
+                <span class="text-2xl">←</span>
+            </button>
+            <button id="next-project"
+                class="hidden md:flex absolute right-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 items-center justify-center rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-purple-500/40 hover:border-purple-500/50 transition-all duration-300 cursor-pointer shadow-lg opacity-0 group-hover/slider:opacity-100">
+                <span class="text-2xl">→</span>
+            </button>
+
+            <div id="project-container"
+                class="w-full h-fit flex gap-8 overflow-x-scroll overflow-y-hidden scrolling-touch pb-8 px-4 snap-x scroll-smooth no-scrollbar">
+                <div class="w-72 md:w-96 shrink-0 snap-center group">
+                    <div
+                        class="relative p-px rounded-2xl bg-linear-to-br from-white/10 to-transparent group-hover:from-purple-500/40 transition-all duration-500">
+                        <img data-project="pPortfolio"
+                            class="project-trigger rounded-2xl w-full h-48 object-cover cursor-pointer hover:scale-[1.02] transition-transform duration-500"
+                            src="Nouveau/assets/librairies/Portfolio_V1.webp" alt="Portfolio V1">
+                    </div>
+                    <p class="mt-4 text-sm font-bold text-gray-500 uppercase tracking-widest text-center">Portfolio V1
+                    </p>
+                </div>
+                <div class="w-72 md:w-96 shrink-0 snap-center group">
+                    <div
+                        class="relative p-px rounded-2xl bg-linear-to-br from-white/10 to-transparent group-hover:from-purple-500/40 transition-all duration-500">
+                        <img data-project="pEpicerie"
+                            class="project-trigger rounded-2xl w-full h-48 object-cover cursor-pointer hover:scale-[1.02] transition-transform duration-500"
+                            src="Nouveau/assets/librairies/Projet_3.webp" alt="Projet 3">
+                    </div>
+                    <p class="mt-4 text-sm font-bold text-gray-500 uppercase tracking-widest text-center">Épicerie</p>
+                </div>
+                <div class="w-72 md:w-96 shrink-0 snap-center group">
+                    <div
+                        class="relative p-px rounded-2xl bg-linear-to-br from-white/10 to-transparent group-hover:from-purple-500/40 transition-all duration-500">
+                        <img data-project="pIntegration"
+                            class="project-trigger rounded-2xl w-full h-48 object-cover cursor-pointer hover:scale-[1.02] transition-transform duration-500"
+                            src="Nouveau/assets/librairies/Projet_Integration.webp" alt="Projet Integration">
+                    </div>
+                    <p class="mt-4 text-sm font-bold text-gray-500 uppercase tracking-widest text-center">Intégration
+                    </p>
+                </div>
+                <div class="w-72 md:w-96 shrink-0 snap-center group">
+                    <div
+                        class="relative p-px rounded-2xl bg-linear-to-br from-white/10 to-transparent group-hover:from-purple-500/40 transition-all duration-500">
+                        <img data-project="pCV"
+                            class="project-trigger rounded-2xl w-full h-48 object-cover cursor-pointer hover:scale-[1.02] transition-transform duration-500"
+                            src="Nouveau/assets/librairies/Projet_CV.webp" alt="Projet CV">
+                    </div>
+                    <p class="mt-4 text-sm font-bold text-gray-500 uppercase tracking-widest text-center">CV Online</p>
+                </div>
+                <div class="w-72 md:w-96 shrink-0 snap-center group">
+                    <div
+                        class="relative p-px rounded-2xl bg-linear-to-br from-white/10 to-transparent group-hover:from-purple-500/40 transition-all duration-500">
+                        <img data-project="pSiteRevision"
+                            class="project-trigger rounded-2xl w-full h-48 object-cover cursor-pointer hover:scale-[1.02] transition-transform duration-500"
+                            src="Nouveau/assets/librairies/Site_Revision.webp" alt="Site Revision">
+                    </div>
+                    <p class="mt-4 text-sm font-bold text-gray-500 uppercase tracking-widest text-center">Site Révision
+                    </p>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <div class="mt-40 relative z-10 pb-32">
+            <h3 class="self-start ml-4 font-bold text-4xl mb-20 italic tracking-tighter">
+                <span class="overline decoration-purple-500 decoration-[6px] underline-offset-8">Tim</span>eline
+            </h3>
+
+            <div class="flex flex-col items-center">
+
+                <div class="w-full max-w-3xl relative">
+                    <div
+                        class="p-px rounded-2xl bg-linear-to-br from-white/20 to-transparent shadow-lg shadow-purple-500/5">
+                        <div
+                            class="bg-black/40 backdrop-blur-xl rounded-2xl p-8 flex flex-col md:flex-row items-center gap-8 border border-white/5 hover:border-purple-500/30 transition-colors duration-500">
+                            <div class="text-center md:text-left shrink-0">
+                                <span class="text-purple-400 font-black text-2xl tracking-tighter italic">À venir</span>
+                            </div>
+                            <div
+                                class="h-px w-full md:w-16 bg-linear-to-r from-purple-500/50 to-transparent hidden md:block">
+                            </div>
+                            <div class="flex-1 flex justify-center md:justify-end">
+                                <div
+                                    class="p-4 bg-white/5 border border-white/10 rounded-xl shadow-[0_0_15px_-3px_rgba(168,85,247,0.5)] group">
+                                    <img class="w-16 h-16 grayscale group-hover:grayscale-0 transition-all duration-500"
+                                        src="Nouveau/assets/librairies/python-svgrepo-com.svg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="h-20 w-px bg-linear-to-b from-purple-500/50 to-transparent"></div>
+
+                <div class="w-full max-w-3xl relative">
+                    <div
+                        class="p-px rounded-2xl bg-linear-to-br from-white/20 to-transparent shadow-lg shadow-purple-500/5">
+                        <div
+                            class="bg-black/40 backdrop-blur-xl rounded-2xl p-8 flex flex-col md:flex-row items-center gap-8 border border-white/5 hover:border-purple-500/30 transition-colors duration-500">
+                            <div class="text-center md:text-left shrink-0">
+                                <span class="text-gray-400 font-bold tracking-tight">juin 2026 - période de stage</span>
+                            </div>
+                            <div
+                                class="h-px w-full md:w-16 bg-linear-to-r from-purple-500/50 to-transparent hidden md:block">
+                            </div>
+                            <div class="flex-1 flex justify-center md:justify-end">
+                                <div
+                                    class="p-4 bg-white/5 border border-white/10 rounded-xl shadow-[0_0_15px_-3px_rgba(168,85,247,0.5)] group">
+                                    <img class="w-16 h-16 grayscale group-hover:grayscale-0 transition-all duration-500"
+                                        src="Nouveau/assets/librairies/python-svgrepo-com.svg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="h-20 w-px bg-linear-to-b from-purple-500/50 to-transparent"></div>
+
+
+                <div class="w-full max-w-3xl relative">
+                    <div
+                        class="p-px rounded-2xl bg-linear-to-br from-white/20 to-transparent shadow-lg shadow-purple-500/5">
+                        <div
+                            class="bg-black/40 backdrop-blur-xl rounded-2xl p-8 flex flex-col md:flex-row items-center gap-8 border border-white/5 hover:border-purple-500/30 transition-colors duration-500">
+                            <div class="text-center md:text-left shrink-0">
+                                <span class="text-gray-400 font-bold tracking-tight">Avril 2026</span>
+                            </div>
+                            <div
+                                class="h-px w-full md:w-16 bg-linear-to-r from-purple-500/50 to-transparent hidden md:block">
+                            </div>
+                            <div class="flex-1 flex justify-center md:justify-end">
+                                <div
+                                    class="p-4 bg-white/5 border border-white/10 rounded-xl shadow-[0_0_15px_-3px_rgba(168,85,247,0.5)] group">
+                                    <img class="w-16 h-16 grayscale group-hover:grayscale-0 transition-all duration-500"
+                                        src="Nouveau/assets/librairies/python-svgrepo-com.svg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="h-16 w-px bg-white/10"></div>
+
+                <div class="w-full max-w-3xl">
+                    <div class="p-px rounded-2xl bg-linear-to-br from-white/10 to-transparent">
+                        <div
+                            class="bg-black/30 backdrop-blur-lg rounded-2xl p-8 flex flex-col md:flex-row items-center gap-8 border border-white/5">
+                            <div class="text-center md:text-left shrink-0">
+                                <span class="text-gray-400 font-bold tracking-tight">Février 2026</span>
+                            </div>
+                            <div class="h-px w-full md:w-16 bg-white/10 hidden md:block"></div>
+                            <div class="flex-1 flex justify-center md:justify-end">
+                                <div
+                                    class="p-4 bg-white/20 border border-white/10 rounded-xl shadow-[0_0_15px_-3px_rgba(168,85,247,0.5)]">
+                                    <img class="w-16 h-16 opacity-60 hover:opacity-100 transition-opacity"
+                                        src="Nouveau/assets/librairies/tailwind-svgrepo-com.svg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="h-16 w-px bg-white/10"></div>
+
+                <div class="w-full max-w-3xl">
+                    <div class="p-px rounded-2xl bg-linear-to-br from-white/10 to-transparent">
+                        <div
+                            class="bg-black/30 backdrop-blur-lg rounded-2xl p-8 flex flex-col md:flex-row items-center gap-8 border border-white/5">
+                            <div class="text-center md:text-left shrink-0">
+                                <span class="text-gray-400 font-bold tracking-tight">Janvier 2026</span>
+                            </div>
+                            <div class="h-px w-full md:w-16 bg-white/10 hidden md:block"></div>
+                            <div class="flex-1 flex justify-center md:justify-end">
+                                <div
+                                    class="p-4 bg-white/20 border border-white/10 rounded-xl shadow-[0_0_15px_-3px_rgba(168,85,247,0.5)]">
+                                    <img class="w-16 h-16 opacity-60 hover:opacity-100 transition-opacity"
+                                        src="Nouveau/assets/librairies/php-svgrepo-com.svg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="h-16 w-px bg-white/10"></div>
+
+                <div class="w-full max-w-3xl">
+                    <div class="p-px rounded-2xl bg-linear-to-br from-white/10 to-transparent">
+                        <div
+                            class="bg-black/30 backdrop-blur-lg rounded-2xl p-8 flex flex-col md:flex-row items-center gap-8 border border-white/5">
+                            <div class="text-center md:text-left shrink-0">
+                                <span class="text-gray-400 font-bold tracking-tight">Décembre 2025</span>
+                            </div>
+                            <div class="h-px w-full md:w-16 bg-white/10 hidden md:block"></div>
+                            <div class="flex-1 flex justify-center md:justify-end gap-6">
+                                <div
+                                    class="p-4 bg-white/20 border border-white/10 rounded-xl shadow-[0_0_15px_-3px_rgba(168,85,247,0.5)]">
+                                    <img class="w-16 h-16 opacity-60 hover:opacity-100 transition-opacity"
+                                        src="Nouveau/assets/librairies/javascript-svgrepo-com.svg">
+                                </div>
+                                <div
+                                    class="p-4 bg-white/20 border border-white/10 rounded-xl shadow-[0_0_15px_-3px_rgba(168,85,247,0.5)]">
+                                    <img class="w-16 h-16 opacity-60 hover:opacity-100 transition-opacity"
+                                        src="Nouveau/assets/librairies/git-icon-logo-svgrepo-com.svg">
+                                </div>
+                                <div
+                                    class="p-4 bg-white/20 border border-white/10 rounded-xl shadow-[0_0_15px_-3px_rgba(168,85,247,0.5)]">
+                                    <img class="w-16 h-16 opacity-60 hover:opacity-100 transition-opacity"
+                                        src="Nouveau/assets/librairies/github-142-svgrepo-com.svg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="h-16 w-px bg-white/10"></div>
+
+                <div class="w-full max-w-3xl">
+                    <div class="p-px rounded-2xl bg-linear-to-br from-white/10 to-transparent">
+                        <div
+                            class="bg-black/30 backdrop-blur-lg rounded-2xl p-8 flex flex-col md:flex-row items-center gap-8 border border-white/5">
+                            <div class="text-center md:text-left shrink-0">
+                                <span class="text-gray-400 font-bold tracking-tight">Septembre 2025</span>
+                            </div>
+                            <div class="h-px w-full md:w-16 bg-white/10 hidden md:block"></div>
+                            <div class="flex-1 flex flex-wrap justify-center md:justify-end gap-6">
+                                <div
+                                    class="p-4 bg-white/20 border border-white/10 rounded-xl shadow-[0_0_15px_-3px_rgba(168,85,247,0.5)]">
+                                    <img class="w-16 h-16 opacity-60 hover:opacity-100 transition-opacity"
+                                        src="Nouveau/assets/librairies/html-5-svgrepo-com.svg">
+                                </div>
+                                <div
+                                    class="p-4 bg-white/20 border border-white/10 rounded-xl shadow-[0_0_15px_-3px_rgba(168,85,247,0.5)]">
+                                    <img class="w-16 h-16 opacity-60 hover:opacity-100 transition-opacity"
+                                        src="Nouveau/assets/librairies/css-3-svgrepo-com.svg">
+                                </div>
+                                <div
+                                    class="p-4 bg-white/20 border border-white/10 rounded-xl shadow-[0_0_15px_-3px_rgba(168,85,247,0.5)]">
+                                    <img class="w-16 h-16 opacity-60 hover:opacity-100 transition-opacity"
+                                        src="Nouveau/assets/librairies/csharp-svgrepo-com.svg">
+                                </div>
+                                <div
+                                    class="p-4 bg-white/20 border border-white/10 rounded-xl shadow-[0_0_15px_-3px_rgba(168,85,247,0.5)]">
+                                    <img class="w-16 h-16 opacity-60 hover:opacity-100 transition-opacity"
+                                        src="Nouveau/assets/librairies/sql-svgrepo-com.svg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div id="project-modal"
+                    class="fixed inset-0 z-100 flex items-center justify-center p-6 opacity-0 pointer-events-none transition-all duration-500 scale-95">
+                    <div class="absolute inset-0 bg-black/60 backdrop-blur-md" id="modal-overlay"></div>
+                    <div
+                        class="relative w-full max-w-2xl p-px rounded-3xl bg-linear-to-br from-white/20 to-transparent shadow-[0_0_100px_-12px_rgba(168,85,247,0.4)]">
+                        <div
+                            class="bg-[#0b0b1a]/90 backdrop-blur-2xl rounded-3xl p-10 max-h-[80vh] overflow-y-auto custom-scrollbar">
+                            <button id="close-modal"
+                                class="absolute top-6 right-6 w-10 h-10 flex items-center justify-center rounded-full bg-white/5 border border-white/10 hover:bg-red-500/20 hover:border-red-500/50 transition-all duration-300 group cursor-pointer">
+                                <span class="text-white text-2xl group-hover:rotate-90 transition-transform">×</span>
+                            </button>
+                            <div id="modal-content"
+                                class="text-gray-300 leading-relaxed space-y-4 prose prose-invert prose-purple">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+                <script>
+                    const data = {
+                        pPortfolio: `
+        <p>Début : 22 Janvier 2026 - Fin : 5 Février 2026</p>
+        <p>Projet encadré, réalisé à l'aide d'un kit UI</p>
+        <p>Travail solo.</p>
+        <p>Il utilise les langages HTML, CSS, JavaScript.</p>
+        <p>Utilisation de Git/GitHub.</p>
+        <p>Objectif : A l'aide d'un kit UI, réaliser un portfolio. </p>
+        <p>Le portfolio est accessible en ligne, et son but est d'être une vitrine de mes différentes compétences
+            acquises.</p>
+        <p>Problème rencontré : Le respect du kit UI, l'utilisation d'un display grid et son adaptation sur différentes
+            taille d'écrans.</p>
+        `,
+                        pEpicerie: `
+        <p>Début : 1er décembre 2025 - Fin : 15 janvier 2026</p>
+        <p>Un site web type épicerie sur plusieurs pages, le site a été réalisé en groupe de 4 personnes.</p>
+        <p>Travail en mode projet, type agile.</p>
+        <p>Il utilise les langages HTML, CSS, et JS.</p>
+        <p>Utilisation de Git/GitHub.</p>
+        <p>Temps de réalisation : 120h réparti sur 6 semaines.</p>
+        <p>Problème rencontré : Utilisation d'un langage encore inconnu : JavaScript.</p>
+        <p>Résolution du problème : Veille intensive et utilisation de Gémini pour expliquer les différentes
+            fonctionnalités de ce nouveau langage.</p>
+        `,
+                        pIntegration: `
+        <p>Début : octobre 2025 - Fin : novembre 2025</p>
+        <p>Un site web composé de 3 pages distinctes, réalisé en binôme.</p>
+        <p>Travail en mode projet.</p>
+        <p>Il utilise les langages HTML, CSS.</p>
+        <p>Utilisation de Git/GitHub.</p>
+        <p>Temps de réalisation : 80h réparti sur 5 semaines.</p>
+        <p>Problème rencontré : Intégration des différentes pages entre elles, travail en binôme et gestion de la
+            responsive.</p>
+        <p>Résolution du problème : Veille sur Git / GitHub afin de gérer le travail à deux de manière efficace et
+            regrouper plus efficacement les blocs codés de part et d'autres.</p>
+        `,
+                        pCV: `
+        <p>Premier projet réalisé seul dans l'environnement "piscine" du lycée Saint-Vincent.</p>
+        <p>Une page web type CV, réalisée à partir d'une maquette.</p>
+        <p>Travail en solo.</p>
+        <p>Il utilise les langages HTML, CSS.</p>
+        <p>Temps de réalisation : 30h réparti sur 2 semaines.</p>
+        <p>Problème rencontré : Découverte des IDE, des langages utilisés, et de la méthode de travail en
+            autonomie.</p>
+        <p>Résolution du problème : Veille sur les langages pour une meilleure appropriation du code, beaucoup de
+            recherche et d'essais/erreurs.</p>
+        `,
+                        pSiteRevision: `
+        <p>Début : Janvier 2026 - Fin : Indéterminée</p>
+        <p>Projet personnel en collaboration avec une camarade de classe, Elena Longuet.</p>
+        <p>Travail en binôme.</p>
+        <p>Il utilise les langages HTML, CSS, JavaScript, PHP.</p>
+        <p>Utilisation de Git/GitHub.</p>
+        <p>Présence d'un "chat"-bot relié avec une clé api à un modèle d'IA, permettant de poser des questions sur les
+            différentes notions abordées dans les fiches de révisions.</p>
+        <p>Temps de réalisation : 40h et + à venir</p>
+        <p>Objectif : Créer un site qui regroupe des fiches de révisions permettant aux élèves du BTS SIO de pouvoir
+            réviser les différentes matières depuis une seule et même plateforme.</p>
+        <p>De plus, le site est aussi pour nous un moyen de s'exercer en dehors des projets encadrés, de tester de
+            nouvelles fonctionnalités </p>
+        <p>Problème rencontré : - L'utlisation de JS encore délicate, l'apprentissage de ce langage étant uniquement
+            basé sur des veilles personnelles.</p>
+        <p>- La charge de travail importante, avec la rédaction de fiches simple et concises pour chaque matière
+            présente sur le site</p>
+        `,
+                    };
+
+                    const triggers = document.querySelectorAll('.project-trigger');
+                    const modal = document.getElementById('project-modal');
+                    const modalContent = document.getElementById('modal-content');
+                    const closeModal = document.getElementById('close-modal');
+                    const modalOverlay = document.getElementById('modal-overlay');
+                    const projectContainer = document.getElementById('project-container');
+                    const prevBtn = document.getElementById('prev-project');
+                    const nextBtn = document.getElementById('next-project');
+                    const body = document.body;
+
+
+                    if (prevBtn && nextBtn && projectContainer) {
+                        prevBtn.addEventListener('click', () => {
+                            projectContainer.scrollBy({ left: -400, behavior: 'smooth' });
+                        });
+                        nextBtn.addEventListener('click', () => {
+                            projectContainer.scrollBy({ left: 400, behavior: 'smooth' });
+                        });
+                    }
+
+                    function openProjectModal(projectId) {
+                        modalContent.innerHTML = data[projectId];
+                        modal.classList.remove('opacity-0', 'pointer-events-none', 'scale-95');
+                        modal.classList.add('opacity-100', 'scale-100');
+                        body.style.overflow = 'hidden';
+                    }
+
+                    function closeProjectModal() {
+                        modal.classList.remove('opacity-100', 'scale-100');
+                        modal.classList.add('opacity-0', 'pointer-events-none', 'scale-95');
+                        setTimeout(() => {
+                            body.style.overflow = 'auto';
+                        }, 500);
+                    }
+
+                    triggers.forEach(trigger => {
+                        trigger.addEventListener('click', () => {
+                            const projectId = trigger.getAttribute('data-project');
+                            openProjectModal(projectId);
+                        });
+                    });
+
+                    closeModal.addEventListener('click', closeProjectModal);
+                    modalOverlay.addEventListener('click', closeProjectModal);
+
+                    document.addEventListener('keydown', (e) => {
+                        if (e.key === 'Escape') closeProjectModal();
+                    });
+                </script>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
