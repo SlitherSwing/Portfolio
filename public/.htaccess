@@ -1,0 +1,8 @@
+# Généré par npm run build:access. Apache 2.4 + mod_rewrite requis.
+Require all granted
+Options -Indexes -MultiViews
+DirectoryIndex index.html
+RewriteEngine On
+# Seuls les fichiers du portfolio sont accessibles, même si d'anciens fichiers subsistent.
+RewriteRule ^(?:$|assets/css/style\.css|assets/documents/CV-Kevin-Mascaro\.pdf|assets/icons/csharp-svgrepo-com\.svg|assets/icons/css-3-svgrepo-com\.svg|assets/icons/git-icon-logo-svgrepo-com\.svg|assets/icons/github-142-svgrepo-com\.svg|assets/icons/html-5-svgrepo-com\.svg|assets/icons/javascript-svgrepo-com\.svg|assets/icons/php-svgrepo-com\.svg|assets/icons/python-svgrepo-com\.svg|assets/icons/sql-svgrepo-com\.svg|assets/icons/symfony-svgrepo-com\.svg|assets/icons/tailwind-svgrepo-com\.svg|assets/icons/twig-svgrepo-com\.svg|assets/images/Portfolio_V1\.webp|assets/images/Projet_3\.webp|assets/images/Projet_CV\.webp|assets/images/Projet_Integration\.webp|assets/images/Site_Revision\.webp|assets/images/profilPicture\.webp|assets/js/main\.js|contact\.html|index\.html)$ - [END]
+RewriteRule ^ - [R=404,L]

@@ -1,19 +1,34 @@
-# Portfolio
+# Portfolio de Kevin Mascaro
 
-## Aperçu local avec actualisation automatique
+## Organisation
 
-Depuis ce dossier, lancer le serveur PHP dans un terminal :
+- `public/index.html` : accueil actuel, seule version conservée.
+- `public/contact.html` : contact.
+- `public/assets/` : CSS compilé, JavaScript, images, icônes et CV utilisés.
+- `src/styles/input.css` : source Tailwind.
+- `scripts/access.mjs` : génère la liste des fichiers autorisés sur Apache.
+- `.git`, les fichiers npm et les sources restent sur le poste de travail.
 
-```sh
-php -S 127.0.0.1:8080 -t .
-```
+## Modifier et vérifier
 
-Dans un second terminal, lancer la surveillance des fichiers :
+Installer avec `npm ci`, puis lancer `npm run build` après une modification.
+`npm run preview` ouvre un serveur local à http://127.0.0.1:8080.
+Le serveur Python ne teste pas les règles Apache `.htaccess`.
 
-```sh
-npx --yes --package browser-sync browser-sync start --proxy http://127.0.0.1:8080 --files '**/*.html,**/*.css,**/*.js,**/*.php,**/*.svg,**/*.webp' --host 127.0.0.1 --port 3000 --no-open --no-ui --no-notify
-```
+## Publier avec FileZilla
 
-Ouvrir http://127.0.0.1:3000/ et enregistrer les modifications pour actualiser l’aperçu automatiquement. Modifier `index.html` à la racine pour l’accueil et `Nouveau/contact.html` pour le contact.
+Envoyer **uniquement le contenu de public/** dans le dossier distant du site,
+avec son fichier caché `.htaccess`. Ne pas envoyer le dossier Portfolio entier.
+L'accueil doit être à `/index.html`, le contact à `/contact.html`, les ressources dans `/assets/`.
+Sur Alwaysdata, le site doit utiliser Apache 2.4 avec mod_rewrite et autoriser `.htaccess`.
+Le fichier généré interdit les URL hors de la liste du site et l'affichage des dossiers.
+Il doit être envoyé à chaque ajout ou suppression de fichier public (`npm run build`).
+Sauvegarder le serveur puis retirer ses anciens fichiers avant publication ; un simple
+transfert ne supprime pas les anciennes copies distantes. Le fichier malveillant
+`accesson.php` doit être retiré du serveur s'il y a été envoyé.
+Vérifier ensuite accueil, contact et CV, ainsi que le refus de `/.git/config`,
+`/Nouveau/index.html`, `/assets/` et `/Nouveau/assets/images/accesson.php`.
 
-Le CSS Tailwind utilisé est `Nouveau/output.css`. Après `npm install`, lancer `npm run watch:css` dans un troisième terminal pour compiler automatiquement les nouvelles classes. Pour une compilation ponctuelle : `npm run build:css`.
+Les pages, images, CSS, JavaScript et le CV sont publics par conception.
+Le formulaire conserve FormSubmit comme destinataire technique : ne pas y mettre de secrets.
+Le nettoyage local ne supprime ni les copies distantes ni l'historique Git antérieur.
