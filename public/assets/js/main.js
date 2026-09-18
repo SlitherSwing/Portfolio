@@ -57,7 +57,7 @@ const data = {
 <p>Début : Janvier 2026 - Fin : Indéterminée</p>
 <p>Projet personnel en collaboration avec une camarade de classe, Elena Longuet.</p>
 <p>Travail en binôme.</p>
-<p>Il utilise les langages HTML, TailwindCSS, JavaScript, PHP., Symfony.</p>
+<p>Il utilise les langages HTML, TailwindCSS, JavaScript, PHP, Symfony.</p>
 <p>Utilisation de Git/GitHub.</p>
 <p>Temps de réalisation : 40h et + à venir</p>
 <p>Objectif : Créer un site qui regroupe des fiches de révisions permettant aux élèves du BTS SIO de pouvoir
@@ -69,6 +69,21 @@ const data = {
 <p>- La charge de travail importante, avec la rédaction de fiches simple et concises pour chaque matière
     présente sur le site</p>
 `,
+
+    pProjetStage: `
+<p>Début et Fin : Juin 2026</p>
+<p>Projet de stage en collaboration avec Elena Longuet et Hugo Plus, au sein de l'entreprise MentalWorks.</p>
+<p>Travail en trinôme supervisé.</p>
+<p>Il utilise les langages HTML, TailwindCSS, JavaScript, PHP, Symfony, Twig.</p>
+<p>Utilisation de Git/GitHub, Docker et Slack.</p>
+<p>Temps de réalisation : 1 semaine de veille sur les technologies utlisées en entreprise et 3 semaines de travail</p>
+<p>Objectif : Le site de l'INRS est un site déjà existant mais non mis à jour depuis un certain temps et sous Bootstrap.
+    Le but est de faire les mises à jour du site nécessaire à son bon fonctionnement, coller l'ésthétique du site à la nouvelle DA imposée par la maquette.</p>
+<p>De plus, il faut également utilisé Tailwind au lieu du Bootsrap existant. Tout cela dans un cadre qui est une première pour nous à savoir ce lui de l'entreprise. </p>
+<p>Problème rencontré : Un rythme à deux vitesse, un début lent lié à l'utilisation de technologies nouvelles,
+    et une fin de stage accélérée pour présenter un livrable pertinent.</p>
+`,
+
 };
 
 // Récupère toutes les images cliquables qui ouvrent un projet.
@@ -129,7 +144,7 @@ function closeProjectModal() {
     setTimeout(() => {
         // Autorise à nouveau le défilement de la page.
         body.style.overflow = 'auto';
-    // Délai de 500 millisecondes, correspondant à la transition de fermeture.
+        // Délai de 500 millisecondes, correspondant à la transition de fermeture.
     }, 500);
 }
 
