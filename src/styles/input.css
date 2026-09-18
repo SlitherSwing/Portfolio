@@ -1,3 +1,167 @@
+/* Charge Tailwind ; désactive la détection automatique des fichiers à analyser. */
 @import "tailwindcss" source(none);
+/* Analyse les pages HTML de public pour générer les utilitaires qu’elles utilisent. */
 @source "../../public/*.html";
+/* Analyse aussi les classes utilisées par JavaScript, notamment les états de la fenêtre de détails. */
 @source "../../public/assets/js/*.js";
+
+/* Styles partagés : les noms de classes doivent correspondre à ceux du HTML.
+   Garder group et group/slider dans le HTML : ce sont des marqueurs, pas des utilitaires utilisables avec @apply.
+   Les variantes de survol qui ciblent ces marqueurs peuvent rester dans @apply.
+   Garder les classes d’état manipulées par main.js sur les éléments HTML concernés.
+   Conserver les directives @import et @source ci-dessus pour compiler les styles du HTML et du JavaScript. */
+@layer components {
+    .link-menu {
+        @apply relative inline-block hover:text-purple-400 transition-colors after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-full after:bg-purple-500 after:origin-left after:scale-x-0 after:transition-transform after:duration-300 after:ease-out hover:after:scale-x-100 focus-visible:after:scale-x-100 motion-reduce:after:transition-none;
+    }
+
+    .overline-text {
+        @apply overline decoration-purple-500 decoration-[6px] underline-offset-8;
+    }
+
+    .section-title {
+        @apply self-start ml-4 font-bold text-4xl mb-12 italic tracking-tighter;
+    }
+
+    .carrousel-button {
+        @apply hidden md:flex absolute top-1/2 -translate-y-1/2 z-20 w-12 h-12 items-center justify-center rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-purple-500/40 hover:border-purple-500/50 transition-all duration-300 cursor-pointer shadow-lg opacity-0 group-hover/slider:opacity-100;
+    }
+
+    /* Conserver les largeurs responsive et shrink-0 pour garder la taille des cartes dans le carrousel. */
+    .project-card {
+        @apply w-72 md:w-96 shrink-0 snap-center;
+    }
+
+    .project-title {
+        @apply mt-4 text-sm font-bold text-gray-500 uppercase tracking-widest text-center;
+    }
+
+    .portfolio-image {
+        @apply rounded-2xl w-full h-48 object-cover cursor-pointer hover:scale-[1.02] transition-transform duration-500;
+    }
+
+    .portfolio-frame {
+        @apply relative p-px rounded-2xl bg-linear-to-br from-white/10 to-transparent group-hover:from-purple-500/40 transition-all duration-500;
+    }
+
+
+    /* Page et navigation */
+    .page-body {
+        @apply bg-[#0b0b1a] text-white font-sans selection:bg-purple-500/30 overflow-x-hidden;
+    }
+
+    .page-container {
+        @apply relative w-full p-10 min-h-screen;
+    }
+
+    .site-nav {
+        @apply flex justify-between items-center text-gray-300 mb-20 relative z-10;
+    }
+
+    .site-name {
+        @apply font-bold text-xl tracking-tight bg-clip-text text-transparent bg-linear-to-r from-purple-400 to-indigo-400;
+    }
+
+    .nav-list {
+        @apply flex gap-8 font-medium;
+    }
+
+
+    /* Fond décoratif */
+    .page-background {
+        @apply fixed inset-0 -z-10 bg-[#0b0b1a];
+    }
+
+    .background-glow-top {
+        @apply absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-purple-600/20 blur-[120px] rounded-full animate-pulse;
+    }
+
+    .background-glow-bottom {
+        @apply absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-indigo-600/20 blur-[120px] rounded-full;
+    }
+
+    .background-glow-center {
+        @apply absolute top-[30%] right-[10%] w-[30%] h-[30%] bg-fuchsia-600/10 blur-[100px] rounded-full animate-bounce [animation-duration:10s];
+    }
+
+    .background-grid {
+        @apply absolute inset-0 opacity-[0.03] pointer-events-none;
+    }
+
+
+    /* Timeline et compétences */
+    .timeline-card-highlight {
+        @apply bg-black/40 backdrop-blur-xl rounded-2xl p-8 flex flex-col md:flex-row items-center gap-8 border border-white/5 hover:border-purple-500/30 transition-colors duration-500;
+    }
+
+    .timeline-card {
+        @apply bg-black/30 backdrop-blur-lg rounded-2xl p-8 flex flex-col md:flex-row items-center gap-8 border border-white/5;
+    }
+
+    .timeline-frame-highlight {
+        @apply p-px rounded-2xl bg-linear-to-br from-white/20 to-transparent shadow-lg shadow-purple-500/5;
+    }
+
+    .timeline-frame {
+        @apply p-px rounded-2xl bg-linear-to-br from-white/10 to-transparent;
+    }
+
+    .timeline-entry {
+        @apply w-full max-w-3xl;
+    }
+
+    .timeline-date-container {
+        @apply text-center md:text-left shrink-0;
+    }
+
+    .timeline-date {
+        @apply text-gray-400 font-bold tracking-tight;
+    }
+
+    .timeline-divider-highlight {
+        @apply h-px w-full md:w-16 bg-linear-to-r from-purple-500/50 to-transparent hidden md:block;
+    }
+
+    .timeline-divider {
+        @apply h-px w-full md:w-16 bg-white/10 hidden md:block;
+    }
+
+    .timeline-connector-highlight {
+        @apply h-20 w-px bg-linear-to-b from-purple-500/50 to-transparent;
+    }
+
+    .timeline-connector {
+        @apply h-16 w-px bg-white/10;
+    }
+
+    .skill-list {
+        @apply flex-1 flex justify-center md:justify-end;
+    }
+
+    .skill-icon-frame {
+        @apply p-4 border border-white/10 rounded-xl shadow-[0_0_15px_-3px_rgba(168,85,247,0.5)];
+    }
+
+    .skill-icon-grayscale {
+        @apply w-16 h-16 grayscale group-hover:grayscale-0 transition-all duration-500;
+    }
+
+    .skill-icon {
+        @apply w-16 h-16 opacity-60 hover:opacity-100 transition-opacity;
+    }
+
+
+    /* Formulaire de contact */
+    .form-field-group {
+        @apply flex flex-col gap-2;
+    }
+
+    .form-label {
+        @apply text-xs font-bold uppercase tracking-widest text-purple-400 ml-1;
+    }
+
+    .form-field {
+        @apply w-full p-4 text-white bg-white/5 border border-white/10 rounded-xl outline-none focus:border-purple-500/50 focus:bg-white/10 transition-all duration-300 placeholder:text-gray-600;
+    }
+
+}
