@@ -27,9 +27,18 @@
         @apply hidden md:flex absolute top-1/2 -translate-y-1/2 z-20 w-12 h-12 items-center justify-center rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-purple-500/40 hover:border-purple-500/50 transition-all duration-300 cursor-pointer shadow-lg opacity-0 group-hover/slider:opacity-100;
     }
 
-    /* Bulles rondes des liens sociaux (accueil) : même verre sombre que les tuiles d'icônes de la Timeline, icône en couleur originale. */
+    /* Liens sociaux : capsules sombres et accents violets assortis à la carte de présentation. */
+    .social-links {
+        @apply flex flex-wrap gap-3 justify-center md:justify-start;
+    }
+
     .social-bubble {
-        @apply w-12 h-12 rounded-full bg-white/20 backdrop-blur-md border border-white/10 flex items-center justify-center shadow-[0_0_15px_-3px_rgba(168,85,247,0.5)] hover:bg-white/30 hover:border-purple-500/50 hover:scale-105 transition-all duration-300;
+        @apply inline-flex min-h-11 items-center justify-center gap-2.5 rounded-full border border-white/10 bg-white/5 px-4 py-2.5 text-sm font-medium text-gray-300 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] hover:border-purple-400/40 hover:bg-purple-500/10 hover:text-purple-200 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-purple-400 motion-reduce:transition-none;
+        transition: color 200ms ease, background-color 200ms ease, border-color 200ms ease;
+    }
+
+    .social-icon {
+        @apply h-5 w-5 shrink-0 brightness-0 invert opacity-80;
     }
 
     /* Conserver les largeurs responsive et shrink-0 pour garder la taille des cartes dans le carrousel. */

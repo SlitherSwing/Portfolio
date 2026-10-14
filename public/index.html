@@ -79,12 +79,14 @@
                             Jr.</p>
                         <p class="text-gray-400 leading-relaxed">Passionné par l'informatique, je suis à la recherche de
                             nouvelles expériences.</p>
-                        <div class="flex gap-4 justify-center md:justify-start">
+                        <div class="social-links">
                             <a href="#" aria-label="LinkedIn" class="social-bubble">
-                                <img src="assets/icons/linkedin-svgrepo-com.svg" alt="LinkedIn" class="w-6 h-6">
+                                <img src="assets/icons/linkedin-svgrepo-com.svg" alt="" class="social-icon" width="20" height="20">
+                                <span>LinkedIn</span>
                             </a>
                             <a href="#" aria-label="GitHub" class="social-bubble">
-                                <img src="assets/icons/github-142-svgrepo-com.svg" alt="GitHub" class="w-6 h-6">
+                                <img src="assets/icons/github-142-svgrepo-com.svg" alt="" class="social-icon" width="20" height="20">
+                                <span>GitHub</span>
                             </a>
                         </div>
                     </div>
@@ -364,9 +366,13 @@
                         class="relative w-full max-w-2xl p-px rounded-3xl bg-linear-to-br from-white/20 to-transparent shadow-[0_0_100px_-12px_rgba(168,85,247,0.4)]">
                         <div
                             class="bg-[#0b0b1a]/90 backdrop-blur-2xl rounded-3xl p-10 max-h-[80vh] overflow-y-auto custom-scrollbar">
-                            <button id="close-modal"
-                                class="absolute top-6 right-6 w-10 h-10 flex items-center justify-center rounded-full bg-white/5 border border-white/10 hover:bg-red-500/20 hover:border-red-500/50 transition-all duration-300 group cursor-pointer">
-                                <span class="text-white text-2xl group-hover:rotate-90 transition-transform">×</span>
+                            <button id="close-modal" type="button" aria-label="Fermer la fenêtre"
+                                class="absolute top-6 right-6 w-10 h-10 flex items-center justify-center rounded-full bg-white/5 border border-white/10 hover:bg-red-500/20 hover:border-red-500/50 transition-colors duration-300 group/close cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-purple-400 motion-reduce:transition-none">
+                                <svg class="w-5 h-5 text-white origin-center transition-transform duration-300 ease-out group-hover/close:rotate-90 motion-reduce:transition-none motion-reduce:transform-none motion-reduce:rotate-0"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"
+                                    stroke-linecap="round" aria-hidden="true" focusable="false">
+                                    <path d="M6 6 18 18M18 6 6 18" />
+                                </svg>
                             </button>
                             <div id="modal-content"
                                 class="text-gray-300 leading-relaxed space-y-4 prose prose-invert prose-purple">

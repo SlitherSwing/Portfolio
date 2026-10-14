@@ -1,8 +1,5 @@
-// Interactions de la page d’accueil. Les accolades ferment les blocs ; les parenthèses ferment les appels de fonctions.
-// Descriptions HTML des projets ; chaque clé correspond à un attribut data-project dans index.html. Les accents graves permettent un texte sur plusieurs lignes.
-// Si une clé de projet est renommée ici, mettre à jour le data-project correspondant dans index.html.
 const data = {
-    // Description du portfolio : chaque balise p produit un paragraphe dans la fenêtre de détails.
+
     pPortfolio: `
 <p>Début : 22 Janvier 2026 - Fin : 5 Février 2026</p>
 <p>Projet encadré, réalisé à l'aide d'un kit UI</p>
@@ -15,7 +12,6 @@ const data = {
 <p>Problème rencontré : Le respect du kit UI, l'utilisation d'un display grid et son adaptation sur différentes
     taille d'écrans.</p>
 `,
-    // Description du projet épicerie.
     pEpicerie: `
 <p>Début : 1er décembre 2025 - Fin : 15 janvier 2026</p>
 <p>Un site web type épicerie sur plusieurs pages, le site a été réalisé en groupe de 4 personnes.</p>
@@ -27,7 +23,6 @@ const data = {
 <p>Résolution du problème : Veille intensive et utilisation de Gémini pour expliquer les différentes
     fonctionnalités de ce nouveau langage.</p>
 `,
-    // Description du projet d’intégration.
     pIntegration: `
 <p>Début : octobre 2025 - Fin : novembre 2025</p>
 <p>Un site web composé de 3 pages distinctes, réalisé en binôme.</p>
@@ -40,7 +35,6 @@ const data = {
 <p>Résolution du problème : Veille sur Git / GitHub afin de gérer le travail à deux de manière efficace et
     regrouper plus efficacement les blocs codés de part et d'autres.</p>
 `,
-    // Description du CV en ligne.
     pCV: `
 <p>Premier projet réalisé seul dans l'environnement "piscine" du lycée Saint-Vincent.</p>
 <p>Une page web type CV, réalisée à partir d'une maquette.</p>
@@ -52,7 +46,6 @@ const data = {
 <p>Résolution du problème : Veille sur les langages pour une meilleure appropriation du code, beaucoup de
     recherche et d'essais/erreurs.</p>
 `,
-    // Description du site de révision.
     pSiteRevision: `
 <p>Début : Janvier 2026 - Fin : Indéterminée</p>
 <p>Projet personnel en collaboration avec une camarade de classe, Elena Longuet.</p>
@@ -68,6 +61,8 @@ const data = {
     basé sur des veilles personnelles.</p>
 <p>- La charge de travail importante, avec la rédaction de fiches simple et concises pour chaque matière
     présente sur le site</p>
+<p><a href="https://chapprend.lyceestvincent.fr/" target="_blank" rel="noopener noreferrer"
+    class="text-purple-300 underline underline-offset-4 hover:text-purple-200 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-purple-400">Visiter le site de révision (nouvel onglet)</a></p>
 `,
 
     pProjetStage: `
