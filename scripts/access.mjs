@@ -12,11 +12,14 @@ async function walk(dir, prefix = '') {
   for (const entry of await readdir(dir, { withFileTypes: true })) {
     // Ignore les fichiers et dossiers cachés, notamment le fichier de règles généré.
     if (entry.name.startsWith('.')) continue;
+    // Les inclusions ne sont jamais des pages publiques.
+    if (prefix === '' && entry.name === 'includes') continue;
     // Construit le chemin relatif utilisé dans les URL autorisées.
     const path = prefix + entry.name;
     // Explore récursivement les sous-dossiers et ajoute leurs fichiers à la liste.
     if (entry.isDirectory()) result.push(...await walk(dir + '/' + entry.name, path + '/'));
     // Accepte uniquement les fichiers dont l’extension figure dans cette liste.
+    else if (entry.isFile() && path === 'index.php') result.push(path);
     else if (entry.isFile() && /\.(html|css|js|webp|png|jpg|jpeg|svg|pdf)$/.test(path)) result.push(path);
     // Arrête la génération si une entrée inattendue est présente dans public.
     else throw new Error('Fichier public inattendu : ' + path);
@@ -35,8 +38,10 @@ const escaped = files.map(path => path.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
 await writeFile(root + '.htaccess', `# Généré par npm run build:access. Apache 2.4 + mod_rewrite requis.
 Require all granted
 Options -Indexes -MultiViews
-DirectoryIndex index.html
+DirectoryIndex index.php
 RewriteEngine On
+# Conserve les anciens liens vers la page HTML.
+RewriteRule ^index\\.html$ index.php [R=301,L]
 # Seuls les fichiers du portfolio sont accessibles, même si d'anciens fichiers subsistent.
 RewriteRule ^(?:$|${escaped.join('|')})$ - [END]
 RewriteRule ^ - [R=404,L]

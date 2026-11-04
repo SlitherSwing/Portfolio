@@ -1,7 +1,9 @@
 /* Charge Tailwind ; désactive la détection automatique des fichiers à analyser. */
 @import "tailwindcss" source(none);
-/* Analyse les pages HTML de public pour générer les utilitaires qu’elles utilisent. */
+/* Analyse les pages HTML et PHP, ainsi que les deux inclusions. */
 @source "../../public/*.html";
+@source "../../public/*.php";
+@source "../../public/includes/*.php";
 /* Analyse aussi les classes utilisées par JavaScript, notamment les états de la fenêtre de détails. */
 @source "../../public/assets/js/*.js";
 
