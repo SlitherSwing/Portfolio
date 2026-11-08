@@ -24,7 +24,6 @@
         <div class="background-glow-center">
         </div>
 
-
         <!-- Grille décorative -->
         <div class="background-grid"
             style="background-image: linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px); background-size: 50px 50px;">
