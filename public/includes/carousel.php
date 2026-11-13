@@ -116,7 +116,7 @@ if (!defined('PORTFOLIO_PAGE')) {
 
             <div class="portfolio-frame">
                 <img data-project="pPokeClub" class="project-trigger portfolio-image"
-                    src="assets/images/Projet_Pokeclub.webp" alt="Site PokeClub">
+                    src="assets/images/Pokeclub.webp" alt="Site PokeClub">
             </div>
 
             <p class="project-title">Site PokeClub

@@ -16,7 +16,7 @@ if (!defined('PORTFOLIO_PAGE')) {
             <div class="timeline-frame-highlight">
                 <div class="timeline-card-highlight">
                     <div class="timeline-date-container">
-                        <span class="text-purple-400 font-black text-2xl tracking-tighter italic">À venir</span>
+                        <span class="text-purple-400 font-black text-2xl tracking-tighter italic">Novembre 2026</span>
                     </div>
                     <div class="timeline-divider-highlight">
                     </div>

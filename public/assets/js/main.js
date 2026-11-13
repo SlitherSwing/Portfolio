@@ -79,6 +79,15 @@ const data = {
     et une fin de stage accélérée pour présenter un livrable pertinent.</p>
 `,
 
+    pPokeClub: `
+<p>Début : Octobre 2026 - En constant évolution</p>
+<p>Projet personnel inité suite à un TP encadré.</p>
+<p>Travail individuel.</p>
+<p>Utilisation de Symfony, DaisyUI</p>
+<p>Objectif : Permettre à un joueur de Pokémon compétitif de pouvoir enregistre ses pokémons utilisés. son équipe. Il permet également de stocker les résultats des matchs joués et d'y ajouter un commentaire pour affiner garder un retour lors de prochaines rencontres.</p>
+<p>Premier projet entièrement autonome réalisé en Symfony, l'intérêt de ce site est de m'exercer de manière ludique au framework tout en développant une plateforme qui m'est utile.</p>
+`,
+
 };
 
 // Récupère toutes les images cliquables qui ouvrent un projet.
